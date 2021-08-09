@@ -1,0 +1,395 @@
+/*Add your CSS rules*/
+
+/*Some selectors you may need include are
+a.skip, header, .nav_links, .container,
+.intro, html, .text-block, etc.*/
+
+a.skip {
+	-moz-transition: top 1s ease-out;
+  	position: absolute;
+  	top: -40px;
+}
+
+a.skip:focus {
+  top: 0px;
+}
+
+#about{
+	font-size: 32px;
+}
+
+#method{
+	font-size: 32px;
+}
+
+#clients{
+	font-size: 32px;
+}
+
+#contact{
+	font-size: 32px;
+}
+
+#logo{
+  animation-name: logo;
+  animation-duration: 1s;
+  -moz-animation-name: logo;
+  -moz-animation-duration: 1s;
+  -webkit-animation-name: logo;
+  -webkit-animation-duration: 1s;
+}
+
+@keyframes logo {
+  from {width: 0px;}
+  to {width: 50px;}
+}
+
+@-moz-keyframes logo {
+  from {width: 0px;}
+  to {width: 50px;}
+}
+
+@-webkit-keyframes logo {
+  from {width: 0px;}
+  to {width: 50px;}
+}
+
+header{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#logo {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+.nav_links{
+	text-align: center;
+}
+
+.nav_links li {
+	padding-bottom: 5px;
+}
+
+.nav_links a:hover {
+	color: #50C7C7;
+	text-decoration-line: underline;
+    text-decoration-style: dotted;
+
+}
+
+.nav_links a:focus {
+	color: #50C7C7;
+	text-decoration-line: underline;
+    text-decoration-style: dotted;
+
+}
+
+.container {
+	display: grid;
+  	grid-template-columns: 1fr 3fr 1fr;
+  	grid-template-rows: auto auto auto auto auto;
+  	grid-row-gap: 15px;
+  	background-color: grey;
+}
+
+.intro {
+  /* The image used */
+ background-image: url("../images/header.jpg");
+
+  /* Set a specific height */
+ min-height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  grid-area: 1 / 1 / span 1 / span 3;
+}
+
+.intro h1{
+	padding-left: 100px !important;
+	padding-right: 100px !important;
+}
+
+.intro p{
+	padding-left: 100px !important;
+	padding-right: 100px !important;
+}
+
+.about-image{
+	grid-area: 2 / 1 / span 1 / span 3;
+	max-height: 700px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.method-image{
+	grid-area: 3 / 1 / span 1 / span 3;
+	max-height: 700px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.clients-image{
+	grid-area: 4 / 1 / span 1 / span 3;
+	max-height: 700px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.contact-image{
+	grid-area: 5 / 1 / span 1 / span 3;
+	max-height: 700px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.about.text-block {
+	grid-area: 2 / 2 / span 1 / span 1;
+	align-self: center;
+}
+
+.method.text-block {
+	grid-area: 3 / 2 / span 1 / span 1;
+	align-self: center;
+}
+
+.clients.text-block {
+	grid-area: 4 / 2 / span 1 / span 1;
+	align-self: center;
+}
+
+.contact.text-block {
+	grid-area: 5 / 2 / span 1 / span 1;
+	align-self: center;
+}
+
+footer p {
+	text-decoration: underline;
+	text-decoration-style: solid;
+
+}
+
+@media only screen and (min-width: 750px){
+
+	.nav_links{
+		display: flex;
+  		justify-content: space-evenly;
+  		align-items: center;
+}
+
+
+	.nav_links li {
+	padding: 10px;
+}
+
+	.container {
+  	grid-template-columns:  50px auto 500px auto 50px;
+  	grid-template-rows: 400px 400px 400px 400px 400px;
+}
+
+.intro h1{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.company_intro{
+	margin-left: 70px;
+	margin-right: 70px;
+
+}
+
+.intro {
+	grid-area: 1 / 1 / span 1 / span 5;
+}
+
+.about-image{
+	grid-area: 2 / 2 / span 1 / span 2;
+}
+
+.method-image{
+	grid-area: 3 / 3 / span 1 / span 2;
+}
+
+.clients-image{
+	grid-area: 4 / 2 / span 1 / span 2;
+}
+
+.contact-image{
+	grid-area: 5 / 3 / span 1 / span 2;
+}
+
+.about.text-block {
+	grid-area: 2 / 3 / span 1 / span 2;
+}
+
+.method.text-block {
+	grid-area: 3 / 2 / span 1 / span 2;
+}
+
+.clients.text-block {
+	grid-area: 4 / 3 / span 1 / span 2;
+}
+
+.contact.text-block {
+	grid-area: 5 / 2 / span 1 / span 2;
+}
+}
+
+@media only screen and (min-width: 1125px){
+
+	header{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.nav_links li {
+		padding: 10px;
+	}
+
+	.container {
+  	grid-template-columns:  15px 75px 1fr 25px 1fr 75px 15px;
+  	grid-template-rows: 400px 400px 400px;
+	}
+
+	.intro {
+	grid-area: 1 / 1 / span 1 / span 7;
+	}
+
+	#logo{
+		margin-left: 0px;
+		 animation-name: logoTwo;
+  		animation-duration: 1s;
+  		-moz-animation-name: logoTwo;
+  		-moz-animation-duration: 1s;
+  		-webkit-animation-name: logoTwo;
+ 		-webkit-animation-duration: 1s;
+ 		animation-delay: 0.1s;
+ 		animation-direction: alternate;
+	}
+
+	@keyframes logoTwo {
+  		0%{width: 50px;left: 0px}
+  		50% {width: 150px;left:450px;}
+  		100% {width: 50px;left:0px;}
+	}
+
+@-moz-keyframes logo {
+  from {width: 0px;}
+  to {width: 50px;}
+}
+
+@-webkit-keyframes logo {
+  from {width: 0px;}
+  to {width: 50px;}
+}
+
+.intro h1{
+	
+}
+
+.intro p{
+	
+}
+
+.about-image{
+	grid-area: 2 / 2 / span 1 / span 5;
+}
+
+.method-image{
+	display: none;
+}
+
+.clients-image{
+	grid-area: 3 / 2 / span 1 / span 5;
+}
+
+.contact-image{
+	display: none;
+}
+
+.about.text-block {
+	grid-area: 2 / 3 / span 1 / span 1;
+}
+
+.method.text-block {
+	grid-area: 2 / 5 / span 1 / span 1;
+}
+
+.clients.text-block {
+	grid-area: 3 / 3 / span 1 / span 1;
+}
+
+.contact.text-block {
+	grid-area: 3 / 5 / span 1 / span 1;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #logo {
+    animation: none;
+   }
+
+  .intro {
+  	background-attachment: scroll;
+
+  }
+
+  html{
+  	scroll-behavior: auto !important;
+  }
+
+  a.skip {
+  	transition: top 0s linear !important;
+  }
+}
+
+
+@media print {
+
+	/*.container {
+		grid-template-rows: none;
+	}*/
+
+	.intro {
+		background-image: none;
+		min-height:unset;
+	}
+    .about-image {
+		display: none;
+	}
+
+	.method-image {
+		display: none;
+	}
+
+	.clients-image{
+		display: none;
+	}
+
+	.contact-image{
+		display: none;
+	}
+
+	.nav_links {
+		display: flex;
+		justify-content: space-evenly !important;
+		align-items: center;
+	}
+
+	.nav_links li {
+		padding: 5px 50px 5px 50px;
+	}
+
+	.text-block {
+		min-height:unset;
+	}
+
+}
